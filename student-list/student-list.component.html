@@ -1,0 +1,23 @@
+<table border="1">
+  <tr>
+    <td>
+      Student Id
+    </td>
+    <td>
+      Student Name
+    </td>
+    <td>
+      Description
+    </td>
+    <td>
+      action
+    </td>
+  </tr>
+<tr *ngFor="let student of studentsList; index as i">
+  <td>{{i+1}}</td>
+  <td><a [routerLink]="[student.id]">{{student.name}}</a></td>
+  <td>{{student.description}}</td>
+  <td>{{student.action}}</td>
+  <button routerLink="/edit/{{student.id}}">edit</button>
+</tr>
+</table>

@@ -1,0 +1,14 @@
+<div>
+  <form [formGroup]="studentForm" (submit)="save()">
+    <input type="hidden" formControlName="id">
+    <label>Name:</label>
+    <input type='text' formControlName="name" class="form-control">
+    <label>Description:</label>
+    <input type='text' formControlName="description" class="form-control">
+    <label>Action:</label>
+    <input type='text' formControlName="action" class="form-control">
+    <div>
+      <button type="submit">Save changes</button>
+    </div>
+  </form>
+</div>
